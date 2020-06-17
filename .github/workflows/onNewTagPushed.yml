@@ -13,8 +13,8 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
-            - run: npm run build-storybook
-            - run: npm run deploy-storybook
+            - uses: actions/checkout@master
+            - run: yarn build-storybook
+            - run: yarn deploy-storybook
               env:
                   GH_TOKEN: ${{ secrets.GH_ACTIONS_TEST }}
